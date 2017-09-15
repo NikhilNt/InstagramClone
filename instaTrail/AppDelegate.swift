@@ -2,20 +2,25 @@
 //  AppDelegate.swift
 //  instaTrail
 //
-//  Created by Pritesh Parekh on 7/22/17.
-//  Copyright © 2017 Pritesh Parekh. All rights reserved.
+//  Created by Nikhil Tanappagol on 10/22/16.
+//  Copyright © 2016 Nikhil Tanappagol. All rights reserved.
 //
 
 import UIKit
 import CoreData
+import Firebase
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+ 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        FirebaseApp.configure()
+        Fabric.with([Crashlytics.self])
         // Override point for customization after application launch.
         return true
     }
